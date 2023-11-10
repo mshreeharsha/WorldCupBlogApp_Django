@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup Blog</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="heading">
+        <div>
+            <img src="{% static 'wc2023pic1.webp' %}" alt="Logo 2023" width="250px" height="150px"/>
+        </div>
+        <div class="title">
+            <h1 style="text-align: center;">World Cup 2023 India Blog Page</h1>
+        </div>
+        <div>
+            <img src="{% static 'wc2023pic2.png' %}" alt="Logo 2023" width="250px" height="150px"/>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><button class="navButton"><a href="{% url 'home' %}">Home</a></button></li>
+                <li><button class="navButton"><a href="{% url 'about' %}">About Us</a></button></li>
+                <li><button class="navButton"><a href="{% url 'contact' %}">Contact Us</a></button></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main style="min-height: 30rem;">
+        {%block content%}
+
+        {%endblock%}
+    </main>
+    <footer>
+        <hr>
+        <p style="text-align: center;">World Cup 2023 India</p>
+    </footer>
+</body>
+</html>
